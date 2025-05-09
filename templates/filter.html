@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/filter.css">
+    <title>Groupie-Tracker Filter</title>
+</head>
+<header>
+    <h1> RESULT OF YOUR SEARCH</h1>
+</header>
+<body>
+    <div>
+        <button class="button-92" onclick="window.location.href = 'http://localhost:8080/groupie-tracker'">Back to home</button>
+    </div>
+    <main>
+    <section class="main-container">
+      {{range .Artists}}
+      <div class="divBand">
+        <div class="divBand-inner">
+          <div class="divBand-front">
+            <img class="image" src={{.Image}}>    
+          </div>
+          <div class="divBand-back">
+            <label class="bandName">{{.Name}}</label>
+            {{range $m := .Members}}
+            <pre class="bandMembers">{{$m}}</pre>
+            {{end}}
+            <form method="GET" action="/band/">
+              <button type="submit">Click On Me</button>
+              <input type="hidden" name="ID" value={{.ID}}>
+            </form>
+          </div>
+        </div>
+      </div>
+    {{end}}
+  </section>
+</main>
+  <footer class="footer-container">
+    <div class="container">
+      <div class="footer-copyright">
+        &copy; 2023 copyright by Zone01Rouen/A.Baudry/M.Saint-Vil
+      </div>
+    </div>
+  </footer>  
+</html>

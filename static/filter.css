@@ -1,0 +1,178 @@
+/* __________BANDEAU___________________ */
+@font-face {
+  font-family: 'Rock';
+  src: url('/static/RockSalt-Regular.ttf') format('truetype');
+}
+
+h1 {
+  font-family: 'Rock',sans-serif;
+  font-size: 4.3vw;
+  color:darkgray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+  text-shadow: 10px 8px 0 #000;
+}
+
+/* __________BACKGROUND___________________ */
+
+body {
+  background-image: url("/static/1000_F_381876130_tZGTRygx0oPDLuleQf4ArNMIJHz3zmfi.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  margin-bottom: 1%;
+}
+
+/* __________FOOTER___________________ */
+
+.footer-container {
+  position: fixed;
+  background: linear-gradient(to right, #79016D, #021772);
+  color: #ffe7e7;
+  display: flex;
+  justify-content: center;
+  margin-left: -1%;
+  width: 100vw;
+  bottom: 0;
+}
+
+.footer-copyright {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* __________CARD___________________ */
+
+@font-face {
+  font-family: 'Normal';
+  src: url('/static/AlteHaasGroteskBold.ttf') format('truetype');
+}
+
+/* Style pour les conteneurs .divBand */
+.divBand {
+  height: 240px; /* Hauteur */
+  justify-content: space-between; /* Justification entre les éléments (inutile ici) */
+  flex-basis: 240px; /* Taille de base dans un conteneur flexible */
+  flex-wrap: wrap; /* Enveloppement des éléments flexibles sur plusieurs lignes */
+  display: flex; /* Affichage en tant que conteneur flexible */
+  border: 5px solid transparent; /* Bordure de 5px solide transparente */
+}
+
+/* Style pour les éléments internes .divBand-inner */
+.divBand-inner {
+  position: relative; /* Position relative */
+  width: 100%; /* Largeur de 100% */
+  height: 100%; /* Hauteur de 100% */
+  text-align: center; /* Texte centré horizontalement */
+  transition: transform 0.8s; /* Animation de transformation sur 0.8s */
+  transform-style: preserve-3d; /* Style de préservation 3D pour les transformations */
+  border-radius: 6px; /* Rayon des bords */
+}
+
+/* Animation lorsque .divBand est survolé */
+.divBand:hover .divBand-inner {
+  transform: rotateY(180deg); /* Rotation 3D sur l'axe Y */
+  border-radius: 6px; /* Rayon des bords */
+}
+
+/* Styles pour les faces avant et arrière des .divBand */
+.divBand-front, .divBand-back {
+  position: absolute; /* Position absolue */
+  width: 100%; /* Largeur de 100% */
+  height: 100%; /* Hauteur de 100% */
+  -webkit-backface-visibility: hidden; /* Masquage des faces cachées pour Safari */
+  backface-visibility: hidden; /* Masquage des faces cachées */
+  border-radius: 6px; /* Rayon des bords */
+}
+
+/* Style pour la face avant */
+.divBand-front {
+  background-color: #bbb; /* Couleur d'arrière-plan */
+  color: black; /* Couleur du texte */
+  border-radius: 6px; /* Rayon des bords */
+}
+
+/* Style pour la face arrière */
+.divBand-back {
+  background: linear-gradient(to right, #79016D, #021772);  /* Couleur d'arrière-plan */
+  color: white; /* Couleur du texte */
+  transform: rotateY(180deg); /* Rotation 3D sur l'axe Y pour afficher la face arrière */
+  font-weight: 500; /* Épaisseur de la police */
+  border-radius: 6px; /* Rayon des bords */
+}
+
+/* Style pour les images */
+.image {
+  border-radius: 6px; /* Rayon des bords */
+}
+
+/* Style pour le nom du groupe */
+.bandName {
+  font-size: 30px; /* Taille de police */
+  font-weight: 800; /* Épaisseur de la police */
+  text-transform: capitalize; /* Transformation du texte en majuscules initiales */
+  font-family: 'Bebas Neue', sans-serif; /* Police de caractères */
+}
+
+/* Style pour les membres du groupe */
+.bandMembers {
+  font-size: 9px; /* Taille de police */
+  font-family: 'normal', sans-serif; /* Police de caractères */
+}
+
+/* Styles pour l'élément principal (main) */
+.main-container {
+  margin-top: 80px;
+  margin-left: 114px;
+  margin-right: 70px;
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 0.5%;
+}
+
+.main-container:hover > .divBand:not(:hover) .divBand-inner {
+  /* Animation lorsque les autres cartes sont survolées */
+  filter: brightness(0.5) saturate(0) contrast(1.2) blur(5px);
+  }
+
+.main-container:not(:hover) .divBand-inner {
+  filter: brightness(1) saturate(1) contrast(1) blur(0);
+}
+
+.button-92 {
+  --c: #fff;
+  /* text color */
+  background: linear-gradient(to right, #79016D, #021772) var(--_p,100%)/300% no-repeat;
+  /* background color */
+  color: #0000;
+  border: none;
+  transform: perspective(500px) rotateY(calc(20deg*var(--_i,-1)));
+  text-shadow: calc(var(--_i,-1)* 0.08em) -.01em 0   var(--c),
+    calc(var(--_i,-1)*-0.08em)  .01em 2px #0004;
+  outline-offset: .1em;
+  transition: 0.3s;
+}
+
+.button-92:hover,
+.button-92:focus-visible {
+  --_p: 0%;
+  --_i: 1;
+}
+
+.button-92:active {
+  text-shadow: none;
+  color: var(--c);
+  box-shadow: inset 0 0 9px #0005; /* Valeur corrigée de box-shadow */  transition: 0s;
+}
+
+.button-92 {
+
+  font-weight: bold; /* Gardez cette déclaration */
+  font-size: 2rem;
+  margin: 0;
+  cursor: pointer;
+  padding: .1em .3em;
+  box-shadow: inset 0 0 9px #0005; /* Valeur corrigée de box-shadow */
+  margin-top: 0%;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../static/band.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">    
+        <link href="https://fonts.googleapis.com/css2?family=Heebo&display=swap" rel="stylesheet">
+    </head>
+    <header>
+        <h1>{{.Name}}</h1>
+    </header>
+    <body styles="display:flex; flex-direction:row;">
+        <div>
+            <button class="button-92" onclick="window.location.href = 'http://localhost:8080/groupie-tracker'">Back to home</button>
+        </div>        
+          <div>
+              <img src={{.Image}}>
+            <pre class="presentation">
+                <div class="album_and_date">
+                <label class="first_album">First album:</label>
+                <label class="first_album_value">{{.FirstAlbum}}</label>
+                <br>
+                <label class="creation_date">Creation date:</label>
+                <label class="creation_date_value">{{.CreationDate}}</label>
+                </div>
+            </pre>
+            <h2 class="custom-h2">Members:</h2>
+                {{range $m := .Members}}
+                <pre class="custom-pre">{{$m}}</pre>
+                {{end}}   
+        </div>
+        <div>
+            <h3 class="custom-h3">Concert Locations & Dates</h3>
+            {{range $m := .RelationA}}
+                <pre class=custom-pre-2>{{$m}}</pre>
+            {{end}}
+        </div>
+        
+        <footer class="site-footer">
+            <div class="container">
+                <div class="footer-copyright">
+                  &copy; 2023 copyright by Zone01Rouen/A.Baudry/M.Saint-Vil
+                </div>
+            </div>
+          </footer>
+    </body>
+</html>
+

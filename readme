@@ -1,0 +1,88 @@
+
+# Groupie Tracker & Groupie Tracker Filters
+
+Ce projet contient deux applications liées à la gestion d'artistes musicaux. Le premier projet, **Groupie Tracker**, permet de consulter des informations sur des groupes et artistes via une interface web. Le second projet, **Groupie Tracker Filters**, est une extension permettant de filtrer ces informations selon divers critères. Ensemble, ces projets offrent une expérience d'exploration des groupes et des concerts.
+
+## 📦 Contenu du Repository
+
+- **Groupie Tracker** : Une application web permettant d'afficher des informations sur des groupes et artistes.
+- **Groupie Tracker Filters** : Une extension permettant de filtrer les groupes et artistes selon plusieurs critères (année de début, premier album, nombre de membres, etc.).
+
+## 🛠️ Prérequis
+
+Avant de commencer, assurez-vous d'avoir les éléments suivants installés sur votre machine :
+
+- **Go** : Le langage de programmation principal du projet.
+  - Installation : [Go Downloads](https://golang.org/dl/)
+- **Navigateurs web** : Pour tester l'application en local (par exemple Chrome, Firefox).
+
+## 🚀 Installation
+
+### 1. Cloner le repository
+
+```bash
+git clone https://github.com/<votre-nom-utilisateur>/groupie-tracker.git
+cd groupie-tracker
+```
+
+### 2. Installer les dépendances
+
+Si vous n'avez pas encore installé Go, vous pouvez le faire en suivant les instructions ci-dessus. Ensuite, lancez l'installation des dépendances nécessaires :
+
+```bash
+go mod tidy
+```
+
+### 3. Lancer l'application
+
+Une fois les dépendances installées, vous pouvez lancer le serveur localement en exécutant la commande suivante :
+
+```bash
+go run cmd/main.go
+```
+
+Cela démarrera l'application sur `http://localhost:8080`. Vous pourrez alors accéder à l'interface pour consulter les groupes et artistes.
+
+### 4. Groupie Tracker Filters
+
+Pour la version avec les filtres, il suffit de naviguer à l'interface filtrée via le même serveur local ou ajouter des fonctionnalités supplémentaires pour affiner la recherche. Cette version permet de filtrer par :
+
+- Date de création
+- Date du premier album
+- Nombre de membres
+- Localisation des concerts
+
+## ⚙️ Fonctionnalités
+
+### Groupie Tracker
+
+- **Affichage d'artistes** : L'application récupère et affiche des informations sur différents artistes et groupes.
+- **Carte interactive** : Visualisez les lieux des concerts passés et à venir.
+- **Recherche d'artistes** : Une barre de recherche permet de trouver rapidement un groupe ou un artiste.
+- **Tri par critères** : Filtrez les résultats par années, nombre de membres, etc.
+
+### Groupie Tracker Filters
+
+- **Filtrage avancé** : Ajoute des filtres pour affiner la recherche, tels que la date de début de l'artiste, le premier album, et le nombre de membres.
+- **Interface utilisateur simple** : L'interface permet aux utilisateurs de facilement sélectionner des critères de filtrage.
+
+## 💻 Développement
+
+Pour contribuer au projet, clonez le repository et créez une branche pour vos modifications :
+
+```bash
+git checkout -b nom-de-votre-branche
+```
+
+Une fois vos changements effectués, vous pouvez les valider et pousser vos modifications vers le repository.
+
+```bash
+git commit -m "Description des modifications"
+git push origin nom-de-votre-branche
+```
+
+Ensuite, ouvrez une **Pull Request** pour intégrer vos modifications dans la branche principale.
+
+## 📄 Licence
+
+Ce projet est sous licence MIT - voir le fichier [LICENSE](LICENSE) pour plus d'informations.

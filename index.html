@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="static/style.css">
+  <meta charset="UTF-8">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">    
+  <link href="https://fonts.googleapis.com/css2?family=Heebo&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/png" href="/static/disc-vinyl-icon.png" sizes="16x16">
+  <title> Groupie Tracker</title>
+</head>
+<body>
+  <header>
+    <div>
+      <h2>GROUPIE TRACKER</h2>
+      <p>&#x2B07;&#x2B07;&#x2B07;</p>
+    </div>
+    <div class="topnav">
+      <div class="search-container">
+          <form action="/search/">
+            <input type="text" placeholder="Search.." name="search" list="suggestion">
+            <button type="submit"><i class="fa fa-search"></i></button>
+          </form>
+          <datalist id="suggestion">
+            <option value='Queen- Artist'>Queen- Artist</option>
+<option value='SOJA- Artist'>SOJA- Artist</option>
+<option value='Pink Floyd- Artist'>Pink Floyd- Artist</option>
+<option value='Scorpions- Artist'>Scorpions- Artist</option>
+<option value='XXXTentacion- Artist'>XXXTentacion- Artist</option>
+<option value='Mac Miller- Artist'>Mac Miller- Artist</option>
+<option value='Joyner Lucas- Artist'>Joyner Lucas- Artist</option>
+<option value='Kendrick Lamar- Artist'>Kendrick Lamar- Artist</option>
+<option value='ACDC- Artist'>ACDC- Artist</option>
+<option value='Pearl Jam- Artist'>Pearl Jam- Artist</option>
+<option value='Katy Perry- Artist'>Katy Perry- Artist</option>
+<option value='Rihanna- Artist'>Rihanna- Artist</option>
+<option value='Genesis- Artist'>Genesis- Artist</option>
+<option value='Phil Collins- Artist'>Phil Collins- Artist</option>
+<option value='Led Zeppelin- Artist'>Led Zeppelin- Artist</option>
+<option value='The Jimi Hendrix Experience- Artist'>The Jimi Hendrix Experience- Artist</option>
+<option value='Bee Gees- Artist'>Bee Gees- Artist</option>
+<option value='Deep Purple- Artist'>Deep Purple- Artist</option>
+<option value='Aerosmith- Artist'>Aerosmith- Artist</option>
+<option value='Dire Straits- Artist'>Dire Straits- Artist</option>
+<option value='Mamonas Assassinas- Artist'>Mamonas Assassinas- Artist</option>
+<option value='Thirty Seconds to Mars- Artist'>Thirty Seconds to Mars- Artist</option>
+<option value='Imagine Dragons- Artist'>Imagine Dragons- Artist</option>
+<option value='Juice Wrld- Artist'>Juice Wrld- Artist</option>
+<option value='Logic- Artist'>Logic- Artist</option>
+<option value='Alec Benjamin- Artist'>Alec Benjamin- Artist</option>
+<option value='Bobby McFerrins- Artist'>Bobby McFerrins- Artist</option>
+<option value='R3HAB- Artist'>R3HAB- Artist</option>
+<option value='Post Malone- Artist'>Post Malone- Artist</option>
+<option value='Travis Scott- Artist'>Travis Scott- Artist</option>
+<option value='J. Cole- Artist'>J. Cole- Artist</option>
+<option value='Nickelback- Artist'>Nickelback- Artist</option>
+<option value='Mobb Deep- Artist'>Mobb Deep- Artist</option>
+<option value='Guns N' Roses- Artist'>Guns N' Roses- Artist</option>
+<option value='NWA- Artist'>NWA- Artist</option>
+<option value='U2- Artist'>U2- Artist</option>
+<option value='Arctic Monkeys- Artist'>Arctic Monkeys- Artist</option>
+<option value='Fall Out Boy- Artist'>Fall Out Boy- Artist</option>
+<option value='Gorillaz- Artist'>Gorillaz- Artist</option>
+<option value='Eagles- Artist'>Eagles- Artist</option>
+<option value='Linkin Park- Artist'>Linkin Park- Artist</option>
+<option value='Red Hot Chili Peppers- Artist'>Red Hot Chili Peppers- Artist</option>
+<option value='Eminem- Artist'>Eminem- Artist</option>
+<option value='Green Day- Artist'>Green Day- Artist</option>
+<option value='Metallica- Artist'>Metallica- Artist</option>
+<option value='Coldplay- Artist'>Coldplay- Artist</option>
+<option value='Maroon 5- Artist'>Maroon 5- Artist</option>
+<option value='Twenty One Pilots- Artist'>Twenty One Pilots- Artist</option>
+<option value='The Rolling Stones- Artist'>The Rolling Stones- Artist</option>
+<option value='Muse- Artist'>Muse- Artist</option>
+<option value='Foo Fighters- Artist'>Foo Fighters- Artist</option>
+<option value='The Chainsmokers- Artist'>The Chainsmokers- Artist</option>
+<option value='Freddie Mercury-Queen'>Freddie Mercury-Queen</option>
+<option value='Brian May-Queen'>Brian May-Queen</option>
+<option value='John Daecon-Queen'>John Daecon-Queen</option>
+<option value='Roger Meddows-Taylor-Queen'>Roger Meddows-Taylor-Queen</option>
+<option value='Mike Grose-Queen'>Mike Grose-Queen</option>
+<option value='Barry Mitchell-Queen'>Barry Mitchell-Queen</option>
+<option value='Doug Fogie-Queen'>Doug Fogie-Queen</option>
+<option value='Jacob Hemphill-SOJA'>Jacob Hemphill-SOJA</option>
+<option value='Bob Jefferson-SOJA'>Bob Jefferson-SOJA</option>
+<option value='Ryan "Byrd" Berty-SOJA'>Ryan "Byrd" Berty-SOJA</option>
+<option value='Ken Brownell-SOJA'>Ken Brownell-SOJA</option>
+<option value='Patrick O'Shea-SOJA'>Patrick O'Shea-SOJA</option>
+<option value='Hellman Escorcia-SOJA'>Hellman Escorcia-SOJA</option>
+<option value='Rafael Rodriguez-SOJA'>Rafael Rodriguez-SOJA</option>
+<option value='Trevor Young-SOJA'>Trevor Young-SOJA</option>
+<option value='David Gilmour-Pink Floyd'>David Gilmour-Pink Floyd</option>
+<option value='Syd Barrett-Pink Floyd'>Syd Barrett-Pink Floyd</option>
+<option value='Roger Waters-Pink Floyd'>Roger Waters-Pink Floyd</option>
+<option value='Richard Wright-Pink Floyd'>Richard Wright-Pink Floyd</option>
+<option value='Nick Manson-Pink Floyd'>Nick Manson-Pink Floyd</option>
+<option value='Bob Klose-Pink Floyd'>Bob Klose-Pink Floyd</option>
+<option value='Klaus Meine-Scorpions'>Klaus Meine-Scorpions</option>
+<option value='Rudolf Schenker-Scorpions'>Rudolf Schenker-Scorpions</option>
+<option value='Matthias Jabs-Scorpions'>Matthias Jabs-Scorpions</option>
+<option value='Pawel Maciwoda-Scorpions'>Pawel Maciwoda-Scorpions</option>
+<option value='Mikkey Dee-Scorpions'>Mikkey Dee-Scorpions</option>
+<option value='Jahseh Dwayne Ricardo Onfroy-XXXTentacion'>Jahseh Dwayne Ricardo Onfroy-XXXTentacion</option>
+<option value='Malcolm James McCormick-Mac Miller'>Malcolm James McCormick-Mac Miller</option>
+<option value='Gary Maurice Lucas Jr.-Joyner Lucas'>Gary Maurice Lucas Jr.-Joyner Lucas</option>
+<option value='Kendrick Lamar Duckworth-Kendrick Lamar'>Kendrick Lamar Duckworth-Kendrick Lamar</option>
+<option value='Angus Young-ACDC'>Angus Young-ACDC</option>
+<option value='Chris Slade-ACDC'>Chris Slade-ACDC</option>
+<option value='Stevie Young-ACDC'>Stevie Young-ACDC</option>
+<option value='Axl Rose-ACDC'>Axl Rose-ACDC</option>
+<option value='Eddie Vedder-Pearl Jam'>Eddie Vedder-Pearl Jam</option>
+<option value='Mike McCready-Pearl Jam'>Mike McCready-Pearl Jam</option>
+<option value='Stone Gossard-Pearl Jam'>Stone Gossard-Pearl Jam</option>
+<option value='Jeff Ament-Pearl Jam'>Jeff Ament-Pearl Jam</option>
+<option value='Matt Cameron-Pearl Jam'>Matt Cameron-Pearl Jam</option>
+<option value='Katheryn Elizabeth Hudson-Katy Perry'>Katheryn Elizabeth Hudson-Katy Perry</option>
+<option value='Robyn Rihanna Fenty-Rihanna'>Robyn Rihanna Fenty-Rihanna</option>
+<option value='Mike Rutherford-Genesis'>Mike Rutherford-Genesis</option>
+<option value='Tony Banks-Genesis'>Tony Banks-Genesis</option>
+<option value='Phil Collins-Genesis'>Phil Collins-Genesis</option>
+<option value='Chester Thompson-Genesis'>Chester Thompson-Genesis</option>
+<option value='Daryl Stuermer-Genesis'>Daryl Stuermer-Genesis</option>
+<option value='Phil Collins-Phil Collins'>Phil Collins-Phil Collins</option>
+<option value='Jimmy Page-Led Zeppelin'>Jimmy Page-Led Zeppelin</option>
+<option value='John Paul Jones-Led Zeppelin'>John Paul Jones-Led Zeppelin</option>
+<option value='Robert Plant-Led Zeppelin'>Robert Plant-Led Zeppelin</option>
+<option value='John Bonham-Led Zeppelin'>John Bonham-Led Zeppelin</option>
+<option value='Jimi Hendrix-The Jimi Hendrix Experience'>Jimi Hendrix-The Jimi Hendrix Experience</option>
+<option value='Mitch Mitchell-The Jimi Hendrix Experience'>Mitch Mitchell-The Jimi Hendrix Experience</option>
+<option value='Noel Redding-The Jimi Hendrix Experience'>Noel Redding-The Jimi Hendrix Experience</option>
+<option value='Billy Cox-The Jimi Hendrix Experience'>Billy Cox-The Jimi Hendrix Experience</option>
+<option value='Barry Gib-Bee Gees'>Barry Gib-Bee Gees</option>
+<option value='Robin Gibb-Bee Gees'>Robin Gibb-Bee Gees</option>
+<option value='Maurice Gibb-Bee Gees'>Maurice Gibb-Bee Gees</option>
+<option value='Ian Paice-Deep Purple'>Ian Paice-Deep Purple</option>
+<option value='Ian Gillan-Deep Purple'>Ian Gillan-Deep Purple</option>
+<option value='Roger Glover-Deep Purple'>Roger Glover-Deep Purple</option>
+<option value='Steve Morse-Deep Purple'>Steve Morse-Deep Purple</option>
+<option value='Don Airey-Deep Purple'>Don Airey-Deep Purple</option>
+<option value='Steven Tyler-Aerosmith'>Steven Tyler-Aerosmith</option>
+<option value='Tom Hamilton-Aerosmith'>Tom Hamilton-Aerosmith</option>
+<option value='Joey Kramer-Aerosmith'>Joey Kramer-Aerosmith</option>
+<option value='Joe Perry-Aerosmith'>Joe Perry-Aerosmith</option>
+<option value='Brad Whitford-Aerosmith'>Brad Whitford-Aerosmith</option>
+<option value='Mark Knopfler-Dire Straits'>Mark Knopfler-Dire Straits</option>
+<option value='David Knopfler-Dire Straits'>David Knopfler-Dire Straits</option>
+<option value='John Illsley-Dire Straits'>John Illsley-Dire Straits</option>
+<option value='Pick Withers-Dire Straits'>Pick Withers-Dire Straits</option>
+<option value='Dinho-Mamonas Assassinas'>Dinho-Mamonas Assassinas</option>
+<option value='Bento Hinoto-Mamonas Assassinas'>Bento Hinoto-Mamonas Assassinas</option>
+<option value='Júlio Rasec-Mamonas Assassinas'>Júlio Rasec-Mamonas Assassinas</option>
+<option value='Sérgio Reoli-Mamonas Assassinas'>Sérgio Reoli-Mamonas Assassinas</option>
+<option value='Samuel Reis de Oliveira-Mamonas Assassinas'>Samuel Reis de Oliveira-Mamonas Assassinas</option>
+<option value='Jared Leto-Thirty Seconds to Mars'>Jared Leto-Thirty Seconds to Mars</option>
+<option value='Shannon Leto-Thirty Seconds to Mars'>Shannon Leto-Thirty Seconds to Mars</option>
+<option value='Tomo Miličević-Thirty Seconds to Mars'>Tomo Miličević-Thirty Seconds to Mars</option>
+<option value='Matt Wachter-Thirty Seconds to Mars'>Matt Wachter-Thirty Seconds to Mars</option>
+<option value='Solon Bixler-Thirty Seconds to Mars'>Solon Bixler-Thirty Seconds to Mars</option>
+<option value='Dan Reynolds-Imagine Dragons'>Dan Reynolds-Imagine Dragons</option>
+<option value='Daniel Wayne Sermon-Imagine Dragons'>Daniel Wayne Sermon-Imagine Dragons</option>
+<option value='Ben McKee-Imagine Dragons'>Ben McKee-Imagine Dragons</option>
+<option value=' Jarad Higgins-Juice Wrld'> Jarad Higgins-Juice Wrld</option>
+<option value='Sir Robert Bryson Hall II-Logic'>Sir Robert Bryson Hall II-Logic</option>
+<option value='Alec Benjamin-Alec Benjamin'>Alec Benjamin-Alec Benjamin</option>
+<option value='Bobby McFerrin-Bobby McFerrins'>Bobby McFerrin-Bobby McFerrins</option>
+<option value='Fadil El Ghoul-R3HAB'>Fadil El Ghoul-R3HAB</option>
+<option value='Post Malone-Post Malone'>Post Malone-Post Malone</option>
+<option value='Jacques Bermon Webster II-Travis Scott'>Jacques Bermon Webster II-Travis Scott</option>
+<option value='Jermaine Lamarr Cole-J. Cole'>Jermaine Lamarr Cole-J. Cole</option>
+<option value='Chad Kroeger-Nickelback'>Chad Kroeger-Nickelback</option>
+<option value='Ryan Peake-Nickelback'>Ryan Peake-Nickelback</option>
+<option value='Mike Kroeger-Nickelback'>Mike Kroeger-Nickelback</option>
+<option value='Daniel Adair-Nickelback'>Daniel Adair-Nickelback</option>
+<option value='Brandon Kroeger-Nickelback'>Brandon Kroeger-Nickelback</option>
+<option value='Ryan Vikedal-Nickelback'>Ryan Vikedal-Nickelback</option>
+<option value='Mitch Guindon-Nickelback'>Mitch Guindon-Nickelback</option>
+<option value='Prodigy-Mobb Deep'>Prodigy-Mobb Deep</option>
+<option value='Havoc-Mobb Deep'>Havoc-Mobb Deep</option>
+<option value='Axl Rose-Guns N' Roses'>Axl Rose-Guns N' Roses</option>
+<option value='Duff McKagan-Guns N' Roses'>Duff McKagan-Guns N' Roses</option>
+<option value='Slash-Guns N' Roses'>Slash-Guns N' Roses</option>
+<option value='Dizzy Reed-Guns N' Roses'>Dizzy Reed-Guns N' Roses</option>
+<option value='Richard Fortus-Guns N' Roses'>Richard Fortus-Guns N' Roses</option>
+<option value='Frank Ferrer-Guns N' Roses'>Frank Ferrer-Guns N' Roses</option>
+<option value='Melissa Reese-Guns N' Roses'>Melissa Reese-Guns N' Roses</option>
+<option value='Ice Cube-NWA'>Ice Cube-NWA</option>
+<option value='Eazy-E-NWA'>Eazy-E-NWA</option>
+<option value='Dr. Dre-NWA'>Dr. Dre-NWA</option>
+<option value='MC Ren-NWA'>MC Ren-NWA</option>
+<option value='DJ Yella-NWA'>DJ Yella-NWA</option>
+<option value='The D.O.C.-NWA'>The D.O.C.-NWA</option>
+<option value='Arabian Prince-NWA'>Arabian Prince-NWA</option>
+<option value='Bono-U2'>Bono-U2</option>
+<option value='The Edge-U2'>The Edge-U2</option>
+<option value='Adam Clayton-U2'>Adam Clayton-U2</option>
+<option value='Larry Mullen Jr.-U2'>Larry Mullen Jr.-U2</option>
+<option value='Ivan McCormick-U2'>Ivan McCormick-U2</option>
+<option value='Peter Martin-U2'>Peter Martin-U2</option>
+<option value='Dick Evans-U2'>Dick Evans-U2</option>
+<option value='Alex Turner-Arctic Monkeys'>Alex Turner-Arctic Monkeys</option>
+<option value='Matt Helders-Arctic Monkeys'>Matt Helders-Arctic Monkeys</option>
+<option value='Jamie Cook-Arctic Monkeys'>Jamie Cook-Arctic Monkeys</option>
+<option value='Nick O'Malley-Arctic Monkeys'>Nick O'Malley-Arctic Monkeys</option>
+<option value='Andy Nicholson-Arctic Monkeys'>Andy Nicholson-Arctic Monkeys</option>
+<option value='Glyn Jones-Arctic Monkeys'>Glyn Jones-Arctic Monkeys</option>
+<option value='Pete Wentz-Fall Out Boy'>Pete Wentz-Fall Out Boy</option>
+<option value='Patrick Stump-Fall Out Boy'>Patrick Stump-Fall Out Boy</option>
+<option value='Andy Hurley-Fall Out Boy'>Andy Hurley-Fall Out Boy</option>
+<option value='Joe Trohman-Fall Out Boy'>Joe Trohman-Fall Out Boy</option>
+<option value='Damon Albarn-Gorillaz'>Damon Albarn-Gorillaz</option>
+<option value='Jamie Hewlett-Gorillaz'>Jamie Hewlett-Gorillaz</option>
+<option value='Remi Kabaka Jr.-Gorillaz'>Remi Kabaka Jr.-Gorillaz</option>
+<option value='Glenn Frey-Eagles'>Glenn Frey-Eagles</option>
+<option value='Don Henley-Eagles'>Don Henley-Eagles</option>
+<option value='Randy Meisner-Eagles'>Randy Meisner-Eagles</option>
+<option value='Bernie Leadon-Eagles'>Bernie Leadon-Eagles</option>
+<option value='Chester Bennington-Linkin Park'>Chester Bennington-Linkin Park</option>
+<option value='Mike Shinoda-Linkin Park'>Mike Shinoda-Linkin Park</option>
+<option value='Brad Delson-Linkin Park'>Brad Delson-Linkin Park</option>
+<option value='Dave Farrell-Linkin Park'>Dave Farrell-Linkin Park</option>
+<option value='Joe Hahn-Linkin Park'>Joe Hahn-Linkin Park</option>
+<option value='Rob Bourdon-Linkin Park'>Rob Bourdon-Linkin Park</option>
+<option value='Anthony Kiedis-Red Hot Chili Peppers'>Anthony Kiedis-Red Hot Chili Peppers</option>
+<option value='Flea-Red Hot Chili Peppers'>Flea-Red Hot Chili Peppers</option>
+<option value='Chad Smith-Red Hot Chili Peppers'>Chad Smith-Red Hot Chili Peppers</option>
+<option value='Josh Klinghoffer-Red Hot Chili Peppers'>Josh Klinghoffer-Red Hot Chili Peppers</option>
+<option value='Marshall Bruce Mathers-Eminem'>Marshall Bruce Mathers-Eminem</option>
+<option value='Billie Joe Armstrong-Green Day'>Billie Joe Armstrong-Green Day</option>
+<option value='Mike Dirnt-Green Day'>Mike Dirnt-Green Day</option>
+<option value='Tré Cool-Green Day'>Tré Cool-Green Day</option>
+<option value='James Hetfield-Metallica'>James Hetfield-Metallica</option>
+<option value='Lars Ulrich-Metallica'>Lars Ulrich-Metallica</option>
+<option value='Kirk Hammett-Metallica'>Kirk Hammett-Metallica</option>
+<option value='Robert Trujillo-Metallica'>Robert Trujillo-Metallica</option>
+<option value='Chris Martin-Coldplay'>Chris Martin-Coldplay</option>
+<option value='Guy Berryman-Coldplay'>Guy Berryman-Coldplay</option>
+<option value='Jonny Buckland-Coldplay'>Jonny Buckland-Coldplay</option>
+<option value='Will Champion-Coldplay'>Will Champion-Coldplay</option>
+<option value='Adam Levine-Maroon 5'>Adam Levine-Maroon 5</option>
+<option value='Jesse Carmichael-Maroon 5'>Jesse Carmichael-Maroon 5</option>
+<option value='Mickey Madden-Maroon 5'>Mickey Madden-Maroon 5</option>
+<option value='James Valentine-Maroon 5'>James Valentine-Maroon 5</option>
+<option value='Matt Flynn-Maroon 5'>Matt Flynn-Maroon 5</option>
+<option value='PJ Morton-Maroon 5'>PJ Morton-Maroon 5</option>
+<option value='Sam Farrar-Maroon 5'>Sam Farrar-Maroon 5</option>
+<option value='Tyler Joseph-Twenty One Pilots'>Tyler Joseph-Twenty One Pilots</option>
+<option value='Josh Dun-Twenty One Pilots'>Josh Dun-Twenty One Pilots</option>
+<option value='Mick Jagger -The Rolling Stones'>Mick Jagger -The Rolling Stones</option>
+<option value='Keith Richards-The Rolling Stones'>Keith Richards-The Rolling Stones</option>
+<option value='Charlie Watts-The Rolling Stones'>Charlie Watts-The Rolling Stones</option>
+<option value='Ron Wood-The Rolling Stones'>Ron Wood-The Rolling Stones</option>
+<option value='Matthew Bellamy-Muse'>Matthew Bellamy-Muse</option>
+<option value='Christopher Wolstenholme-Muse'>Christopher Wolstenholme-Muse</option>
+<option value='Dominic Howard -Muse'>Dominic Howard -Muse</option>
+<option value='Dave Grohl-Foo Fighters'>Dave Grohl-Foo Fighters</option>
+<option value='Nate Mendel-Foo Fighters'>Nate Mendel-Foo Fighters</option>
+<option value='Taylor Hawkins-Foo Fighters'>Taylor Hawkins-Foo Fighters</option>
+<option value='Chris Shiflett-Foo Fighters'>Chris Shiflett-Foo Fighters</option>
+<option value='Pat Smear-Foo Fighters'>Pat Smear-Foo Fighters</option>
+<option value='Rami Jaffee-Foo Fighters'>Rami Jaffee-Foo Fighters</option>
+<option value='Alexander Pall-The Chainsmokers'>Alexander Pall-The Chainsmokers</option>
+<option value='Andrew Taggart-The Chainsmokers'>Andrew Taggart-The Chainsmokers</option>
+<option value='Matt McGuire-The Chainsmokers'>Matt McGuire-The Chainsmokers</option>
+<option value='Tony Ann-The Chainsmokers'>Tony Ann-The Chainsmokers</option>         
+          </datalist>
+      </div>
+    </div>
+  </header>
+  <main>
+    <input type="checkbox" id="toggle-content" class="hidden-checkbox">
+    <div class="label-toggle-button">
+        <button type="button" class="buttonfilters">
+            <label for="toggle-content" class="toggle-label title-word title-word-1">Click here to filters</label>
+        </button>
+    </div>
+    <div class="hidden-content">
+        <section>   
+            <form action="/filter" method="post">
+                <fieldset class="fieldset">
+                    <legend>Year: </legend>
+                    <div id="yearfilters">
+                        <div>
+                            <div>
+                                <legend>Career Starting Year: </legend>
+                                <label>Between </label>
+                                <span id="startCreationYearSpan">1958</span>
+                                <input class="startCreationYearRange" type="range" id="startCreationYearRange" name="startCreationYearRange" min="1958" max="2020" step="1" value="1958">
+                                <label> and </label>
+                                <input class="endCreationYearRange" type="range" id="endCreationYearRange" name="endCreationYearRange" min="1958" max="2020" step="1" value="2020">
+                                <span id="endYearValue01">2020</span>
+                            </div>
+                            <script>
+                                const startCreationYearRange = document.getElementById("startCreationYearRange");
+                                const startCreationYearSpan = document.getElementById("startCreationYearSpan");
+                                const endCreationYearRange = document.getElementById("endCreationYearRange");
+                                const endYearValue01 = document.getElementById("endYearValue01");
+                            
+                                startCreationYearRange.addEventListener("input", function () {
+                                    startCreationYearRange.textContent = startCreationYearRange.value;
+                                    if (parseInt(startCreationYearRange.value) > parseInt(endCreationYearRange.value)) {
+                                        endCreationYearRange.value = startCreationYearRange.value;
+                                        endYearValue01.textContent = startCreationYearRange.textContent;
+                                    }
+                                    startCreationYearSpan.textContent = startCreationYearRange.value;
+                                });
+                            
+                                endCreationYearRange.addEventListener("input", function () {
+                                    endYearValue01.textContent = endCreationYearRange.value;
+                                    if (parseInt(endCreationYearRange.value) < parseInt(startCreationYearRange.value)) {
+                                        startCreationYearRange.value = endCreationYearRange.value;
+                                        startCreationYearSpan.textContent = endYearValue01.textContent;
+                                    }
+                                });
+                            
+                                startCreationYearSpan.textContent = startCreationYearRange.value;
+                                endYearValue01.textContent = endCreationYearRange.value;
+                            </script>
+                        </div>
+                        <div>
+                            <div>
+                                <legend>First Album: </legend>
+                                <label>Between </label>
+                                <span id="startYearValue02">1958</span>
+                                <input class="startFirstAlbumYearRange" type="range" id="startFirstAlbumYearRange" name="startFirstAlbumYearRange" min="1958" max="2020" step="1" value="1958">
+                                <label> and </label>
+                                <input class="endFirstAlbumYearRange" type="range" id="endFirstAlbumYearRange" name="endFirstAlbumYearRange" min="1958" max="2020" step="1" value="2020">
+                                <span id="endYearValue02">2020</span>
+                            </div>
+                            <script>
+                                const startFirstAlbumYearRange = document.getElementById("startFirstAlbumYearRange");
+                                const startYearValue02 = document.getElementById("startYearValue02");
+                                const endFirstAlbumYearRange = document.getElementById("endFirstAlbumYearRange");
+                                const endYearValue02 = document.getElementById("endYearValue02");
+
+                                startFirstAlbumYearRange.addEventListener("input", function () {
+                                    startYearValue02.textContent = startFirstAlbumYearRange.value;
+                                    // Assurez-vous que startYearRange02 <= endYearRange02
+                                    if (parseInt(startFirstAlbumYearRange.value) > parseInt(endFirstAlbumYearRange.value)) {
+                                        endFirstAlbumYearRange.value = startFirstAlbumYearRange.value;
+                                        endYearValue02.textContent = startYearValue02.textContent;
+                                    }
+                                });
+
+                                endFirstAlbumYearRange.addEventListener("input", function () {
+                                    endYearValue02.textContent = endFirstAlbumYearRange.value;
+                                    // Assurez-vous que endYearRange02 >= startYearRange02
+                                    if (parseInt(endFirstAlbumYearRange.value) < parseInt(startFirstAlbumYearRange.value)) {
+                                        startFirstAlbumYearRange.value = endFirstAlbumYearRange.value;
+                                        startYearValue02.textContent = endYearValue02.textContent;
+                                    }
+                                });
+
+                                // Initialisation des valeurs avec les valeurs par défaut
+                                startYearValue02.textContent = startFirstAlbumYearRange.value;
+                                endYearValue02.textContent = endFirstAlbumYearRange.value;
+                            </script>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset class="fieldset">
+                    <legend> Numbers of Members: </legend>
+                    <div>
+                        <label>1</label>
+                        <input type="checkbox" id="checkbox1Member" name="checkboxOneMember" checked/>
+                        <label>2</label>
+                        <input type="checkbox" id="checkbox2Members" name="checkboxTwoMembers" checked/>
+                        <label>3</label>
+                        <input type="checkbox" id="checkbox3Members" name="checkboxThreeMembers" checked/>
+                        <label>4</label>
+                        <input type="checkbox" id="checkbox4Members" name="checkboxFourMembers" checked/>
+                        <label>5</label>
+                        <input type="checkbox" id="checkbox5Members" name="checkboxFiveMembers" checked/>
+                        <label>6</label>
+                        <input type="checkbox" id="checkbox6Members" name="checkboxSixMembers" checked/>
+                        <label>7</label>
+                        <input type="checkbox" id="checkbox7Members" name="checkboxSevenMembers" checked/>
+                        <label>8</label>
+                        <input type="checkbox" id="checkbox8Members" name="checkboxEightMembers" checked/>
+                    </div>
+                </fieldset>
+                <fieldset class="fieldset">
+                    <legend> Select location: </legend>
+                    <div class="locationcheck">
+                        <div>
+                            <label>America:</label>
+                            <select id="locationSelectAmerica" name="locationSelectAmerica">
+                                <option value="Choose">Choose</option>
+                                <option value="Antilles Willemstad Netherlands">Antilles, Willemstad Netherlands</option>
+                                <option value="Argentina Buenos Aires">Argentina, Buenos Aires</option>
+                                <option value="Argentina La Plata">Argentina, La Plata</option>
+                                <option value="Argentina San Isidro">Argentina, San Isidro</option>
+                                <option value="Brazil Belo Horizonte">Brazil, Belo Horizonte</option>
+                                <option value="Brazil Brasilia">Brazil, Brasilia</option>
+                                <option value="Brazil Porto Alegre">Brazil, Porto Alegre</option>
+                                <option value="Brazil Recif">Brazil, Recif</option>
+                                <option value="Brazil Rio De Janeiro">Brazil, Rio De Janeiro</option>
+                                <option value="Brazil Sao Paulo">Brazil, Sao Paulo</option>
+                                <option value="Canada Montreal">Canada, Montreal</option>
+                                <option value="Canada Quebec">Canada, Quebec</option>
+                                <option value="Canada Toronto">Canada, Toronto</option>
+                                <option value="Canada Vancouver">Canada, Vancouver</option>
+                                <option value="Canada Windsor">Canada, Windsor</option>
+                                <option value="Chile Santiago">Chile, Santiago</option>
+                                <option value="Colombia Bogota">Colombia, Bogota</option>
+                                <option value="Mexico Mexico City">Mexico, Mexico City</option>
+                                <option value="Mexico Monterrey">Mexico, Monterrey</option>
+                                <option value="Mexico Playa Del Carmen">Mexico, Playa Del Carmen</option>      
+                                <option value="Peru Lima">Peru, Lima</option>
+                                <option value="USA Alabama">USA, Alabama</option>
+                                <option value="USA Amityville">USA, Amityville</option>
+                                <option value="USA Anaheim">USA, Anaheim</option>
+                                <option value="USA Arizona">USA, Arizona</option>
+                                <option value="USA Atlanta">USA, Atlanta</option>
+                                <option value="USA Berwyn">USA, Berwyn</option>
+                                <option value="USA Boston">USA, Boston</option>
+                                <option value="USA Brooklyn">USA, Brooklyn</option>
+                                <option value="USA Canton">USA, Canton</option>
+                                <option value="USA California">USA, California</option>
+                                <option value="USA Charlotte">USA, Charlotte</option>
+                                <option value="USA Chicago">USA, Chicago</option>
+                                <option value="USA Cincinnati">USA, Cincinnati</option>
+                                <option value="USA Cleveland">USA, Cleveland</option>
+                                <option value="USA Colorado">USA, Colorado</option>
+                                <option value="USA Columbia">USA, Columbia</option>
+                                <option value="USA Dallas">USA, Dallas</option>
+                                <option value="USA Detroit">USA, Detroit</option>
+                                <option value="USA Del Mar">USA, Del Mar</option>
+                                <option value="USA Florida">USA, Florida</option>
+                                <option value="USA Georgia">USA, Georgia</option>
+                                <option value="USA Grand Rapids">USA, Grand Rapids</option>
+                                <option value="USA Hershey">USA, Hershey</option>
+                                <option value="USA Houston">USA, Houston</option>
+                                <option value="USA Illinois">USA, Illinois</option>
+                                <option value="USA Inglewood">USA, Inglewood</option>
+                                <option value="USA Indianapolis">USA, Indianapolis</option>
+                                <option value="USA Kansas City">USA, Kansas City</option>
+                                <option value="USA Las Vegas">USA, Las Vegas</option>
+                                <option value="USA Los Angeles">USA, Los Angeles</option>
+                                <option value="USA Madison">USA, Madison</option>
+                                <option value="USA Maine">USA, Maine</option>
+                                <option value="USA Massachusetts">USA, Massachusetts</option>
+                                <option value="USA Michigan">USA, Michigan</option>
+                                <option value="USA Minneapolis">USA, Minneapolis</option>
+                                <option value="USA Minnesota">USA, Minnesota</option>
+                                <option value="USA Missouri">USA, Missouri</option>
+                                <option value="USA Montreal">USA, Montreal</option>
+                                <option value="USA Nevada">USA, Nevada</option>
+                                <option value="USA New Hampshire">USA, New Hampshire</option>
+                                <option value="USA New Orleans">USA, New Orleans</option>
+                                <option value="USA New York">USA, New York</option>
+                                <option value="USA Newark">USA, Newark</option>
+                                <option value="USA North Calorina">USA, North Calorina</option>
+                                <option value="USA Oakland">USA, Oakland</option>
+                                <option value="USA Oklahoma">USA, Oklahoma</option>
+                                <option value="USA Oregon">USA, Oregon</option>
+                                <option value="USA Pennsylvania">USA, Pennsylvania</option>
+                                <option value="USA Pico Rivera">USA, Pico Rivera</option>
+                                <option value="USA Pittsburgh">USA, Pittsburgh</option>
+                                <option value="USA Rosemont">USA, Rosemont</option>
+                                <option value="USA San Francisco">USA, San Francisco</option>
+                                <option value="USA Seattle">USA, Seattle</option>
+                                <option value="USA South Carolina">USA, South Carolina</option>
+                                <option value="USA St Louis">USA, St Louis</option>
+                                <option value="USA Texas">USA, Texas</option>
+                                <option value="USA Tonronto">USA, Toronto</option>
+                                <option value="USA Uniondale">USA, Uniondale</option>
+                                <option value="USA Utah">USA, Utah</option>
+                                <option value="USA Washington">USA, Washington</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label>Europe:</label>
+                            <select id="locationSelectEurope" name="locationSelectEurope">
+                                <option value="Choose">Choose</option>
+                                <option value="Austria Klagenfurt">Austria, Klagenfurt</option>
+                                <option value="Austria Nickelsdorf">Austria, Nickelsdorf</option>
+                                <option value="Belarus Minsk">Belarus, Minsk</option>
+                                <option value="Belgium Antwerp">Belgium, Antwerp</option>
+                                <option value="Belgium Rotselaar">Belgium, Rotselaar</option>
+                                <option value="Czechia Ostrava">Czechia, Ostrava</option>
+                                <option value="Czechia Prague">Czechia, Prague</option>
+                                <option value="Denmark Aalborg">Denmark, Aalborg</option>
+                                <option value="Denmark Aarhus">Denmark, Aarhus</option>
+                                <option value="Denmark Copenhagen">Denmark, Copenhagen</option>
+                                <option value="Denmark Skanderborg">Denmark, Skanderborg</option>
+                                <option value="Finland Oulu">Finland, Oulu</option>
+                                <option value="Finland Turku">Finland, Turku</option>
+                                <option value="France Arras">France, Arras</option>
+                                <option value="France Bilbao">France, Bilbao</option>
+                                <option value="France Boulogne Billancourt">France, Boulogne Billancourt</option>
+                                <option value="France Freyming Merlebach">France, Freyming Merlebach</option>
+                                <option value="France Lyon">France, Lyon</option>
+                                <option value="France Nimes">France, Nimes</option>
+                                <option value="France Pagney Derriere Barine">France, Pagney Derriere Barine</option>
+                                <option value="France Paris">France, Paris</option>
+                                <option value="France Sochaux">France, Sochaux</option>
+                                <option value="Germany Berlin">Germany, Berlin</option>
+                                <option value="Germany Cuxhaven">Germany, Cuxhaven</option>
+                                <option value="Germany Dusseldorf">Germany, Dusseldorf</option>
+                                <option value="Germany Frankfurt">Germany, Frankfurt</option>
+                                <option value="Germany Hamburg">Germany, Hamburg</option>
+                                <option value="Germany Leipzig">Germany, Leipzig</option>
+                                <option value="Germany Mannheim">Germany, Mannheim</option>
+                                <option value="Germany Merkers">Germany, Merkers</option>
+                                <option value="Germany Monchengladbach">Germany, Monchengladbach</option>
+                                <option value="Germany Munich">Germany, Munich</option>
+                                <option value="Germany Salem">Germany, Salem</option>
+                                <option value="Greece Athens">Greece, Athens</option>
+                                <option value="Hungary Budapest">Hungary, Budapest</option>
+                                <option value="Ireland Dublin">Ireland, Dublin</option>
+                                <option value="Italy Florence">Italy, Florence</option>
+                                <option value="Italy Imola">Italy, Imola</option>
+                                <option value="Italy Milan">Italy, Milan</option>
+                                <option value="Netherlands Amsterdam">Netherlands, Amsterdam</option>
+                                <option value="Netherlands Eindhoven">Netherlands, Eindhoven</option>
+                                <option value="Netherlands Groningen">Netherlands, Groningen</option>
+                                <option value="Netherlands Landgraaf">Netherlands, Landgraaf</option>
+                                <option value="Norway Oslo">Norway, Oslo</option>
+                                <option value="Poland Gdynia">Poland, Gdynia</option>
+                                <option value="Poland Warsaw">Poland, Warsaw</option>
+                                <option value="Romania Napoca">Romania, Napoca</option>
+                                <option value="Slovakia Bratislava">Slovakia, Bratislava</option>
+                                <option value="Spain Barcelona">Spain, Barcelona</option>
+                                <option value="Spain Bilbao">Spain, Bilbao</option>
+                                <option value="Spain Burriana">Spain, Burriana</option>
+                                <option value="Spain Madrid">Spain, Madrid</option>
+                                <option value="Spain Seville">Spain, Seville</option>
+                                <option value="Spain Zaragoza">Spain, Zaragoza</option>
+                                <option value="Sweden Gothenburg">Sweden, Gothenburg</option>
+                                <option value="Sweden Stockholm">Sweden, Stockholm</option>
+                                <option value="Switzerland Lausanne">Switzerland, Lausanne</option>
+                                <option value="Switzerland Sion">Switzerland, Sion</option>
+                                <option value="Switzerland St Gallen">Switzerland, St Gallen</option>
+                                <option value="Switzerland Zurich">Switzerland, Zurich</option>
+                                <option value="United Kingdom Aberdeen">United Kingdom, Aberdeen</option>
+                                <option value="United Kingdom Birmingham">United Kingdom, Birmingham</option>
+                                <option value="United Kingdom Brixton">United Kingdom, Brixton</option>
+                                <option value="United Kingdom Cardiff">United Kingdom, Cardiff</option>
+                                <option value="United Kingdom Glasgow">United Kingdom, Glasgow</option>
+                                <option value="United Kingdom London">United Kingdom, London</option>
+                                <option value="United Kingdom Manchester">United Kingdom, Manchester</option>
+                                <option value="United Kingdom Westcliff On Sea">United Kingdom, Westcliff On Sea</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label>Asia:</label>
+                            <select id="locationSelectAsia" name="locationSelectAsia">
+                                <option value="Choose">Choose</option>
+                                <option value="Choose">Choose</option>  
+                                <option value="China Changzhou">China, Changzhou</option>
+                                <option value="China Hong Kong">China, Hong Kong</option>
+                                <option value="China Huizhou">China, Huizhou</option>
+                                <option value="China Sanya">China, Sanya</option>
+                                <option value="India Mumbai">India, Mumbai</option>
+                                <option value="Indonesia Jakarta">Indonesia, Jakarta</option>
+                                <option value="Indonesia Yogyakarta">Indonesia, Yogyakarta</option>
+                                <option value="Japan Nagoya">Japan, Nagoya</option>
+                                <option value="Japan Osaka">Japan, Osaka</option>
+                                <option value="Japan Saitama">Japan, Saitama</option>
+                                <option value="Phillipines Manila">Phillipines, Manila</option>
+                                <option value="Qatar Doha">Qatar, Doha</option>
+                                <option value="South Korea Seoul">South Korea, Seoul</option>
+                                <option value="Taiwan Taipei">Taiwan, Taipei</option>
+                                <option value="Thailand Bangkok">Thailand, Bangkok</option>
+                                <option value="United Arab Emirates Abu Dhabi">United Arab Emirates, Abu Dhabi</option>
+                                <option value="United Arab Emirates Dubai">United Arab Emirates, Dubai</option>   
+                            </select>
+                        </div>
+                        <div>
+                            <label>Oceania:</label>
+                            <select id="locationSelectOceania" name="locationSelectOceania">
+                                <option value="Choose">Choose</option>
+                                <option value="Choose">Choose</option>  
+                                <option value="Australia Brisbane">Australia, Brisbane</option>
+                                <option value="Australia Burswood">Australia, Burswood</option>
+                                <option value="Australia Melbourne">Australia, Melbourne</option>
+                                <option value="Australia New South Wales">Australia, New South Wales</option>
+                                <option value="Australia Queensland">Australia, Queensland</option>
+                                <option value="Australia Sydney">Australia, Sydney</option>
+                                <option value="Australia Victoria">Australia, Victoria</option>
+                                <option value="Australia West Melbourne">Australia, West Melbourne</option>
+                                <option value="French Polynesia Papeete">French Polynesia, Papeete</option>
+                                <option value="New Caledonia Noumea">New Caledonia, Noumea</option>
+                                <option value="New Zeland Auckland">New Zeland, Auckland</option>
+                                <option value="New Zeland Dunedin">New Zeland, Dunedin</option>
+                                <option value="New Zeland Penrose">New Zeland, Penrose</option>
+                                <option value="New Zeland Wellington">New Zeland, Wellington</option>
+                            </select>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset class="fieldset">
+                    <legend>Apply Filters:</legend>
+                    <div>
+                      <!-- <form method="POST" action="/filter"> -->
+                        <button type="submit">Apply the filters</button>
+                      </div>
+                </fieldset>
+            </form>
+</section>
+    </div>
+    <section class="main-container">
+      {{range .}}
+      <div class="divBand">
+        <div class="divBand-inner">
+          <div class="divBand-front">
+            <img class="image" src={{.Image}}>    
+          </div>
+          <div class="divBand-back">
+            <label class="bandName">{{.Name}}</label>
+            {{range $m := .Members}}
+            <pre class="bandMembers">{{$m}}</pre>
+            {{end}}
+            <form method="GET" action="/band/">
+              <button type="submit">Click On Me</button>
+              <input type="hidden" name="ID" value={{.ID}}>
+            </form>
+          </div>
+        </div>
+      </div>
+    {{end}}
+  </section>
+</main>
+  <footer class="footer-container">
+    <div class="container">
+      <div class="footer-copyright">
+        &copy; 2023 copyright by Zone01Rouen/A.Baudry/M.Saint-Vil
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
+
+<!-- 
+&#x2B07; -->
