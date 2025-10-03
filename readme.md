@@ -1,11 +1,13 @@
-<img src="./presentation_1.png"/>
-<img src="./presentation_2.png"/>
 
-# Groupie Tracker & Groupie Tracker Filters (premier site créer)
+# Groupie Tracker & Groupie Tracker Filters (premier site crée)
 
 Ce projet contient deux applications liées à la gestion d'artistes musicaux. Le premier projet, **Groupie Tracker**, permet de consulter des informations sur des groupes et artistes via une interface web. Le second projet, **Groupie Tracker Filters**, est une extension permettant de filtrer ces informations selon divers critères. Ensemble, ces projets offrent une expérience d'exploration des groupes et des concerts.
 
+<div style="text-align: center;">
+    <img src="./static/presentation_1.png" alt="Capture d'écran de l'exercice 1" width="650"/>
+    <img src="./static/presentation_2.png" alt="Capture d'écran de l'exercice 1" width="650"/>
 
+</div>
 
 ## 📦 Contenu du Repository
 
