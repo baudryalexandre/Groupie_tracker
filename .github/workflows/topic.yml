@@ -1,0 +1,74 @@
+name: Update Topics
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+jobs:
+  update-topics:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Detect frameworks & tools
+        id: detect
+        run: |
+          TOPICS=""
+          # --- Front-end ---
+          [ -f package.json ] && grep -q '"react"' package.json && TOPICS="$TOPICS,react"
+          [ -f package.json ] && grep -q '"vue"' package.json && TOPICS="$TOPICS,vue"
+          [ -f package.json ] && grep -q '"tailwindcss"' package.json && TOPICS="$TOPICS,tailwindcss"
+          [ -f package.json ] && grep -q '"bootstrap"' package.json && TOPICS="$TOPICS,bootstrap"
+          # --- Back-end JS ---
+          [ -f package.json ] && grep -q '"express"' package.json && TOPICS="$TOPICS,express"
+          # --- Back-end Python ---
+          [ -f requirements.txt ] && grep -qi 'django' requirements.txt && TOPICS="$TOPICS,django"
+          [ -f requirements.txt ] && grep -qi 'flask' requirements.txt && TOPICS="$TOPICS,flask"
+          grep -rl 'from flask\|import flask' . --include="*.py" > /dev/null 2>&1 && TOPICS="$TOPICS,flask"
+          # --- Back-end PHP ---
+          [ -f composer.json ] && grep -q 'laravel' composer.json && TOPICS="$TOPICS,laravel"
+          # --- Back-end Go ---
+          grep -rl 'net/http' . --include="*.go" > /dev/null 2>&1 && TOPICS="$TOPICS,rest-api"
+          grep -rl 'html/template\|text/template' . --include="*.go" > /dev/null 2>&1 && TOPICS="$TOPICS,html-template"
+          # --- ES Modules ---
+          grep -rl 'type="module"' . --include="*.html" > /dev/null 2>&1 && TOPICS="$TOPICS,es-modules"
+          # --- JSON data ---
+          ls *.json > /dev/null 2>&1 && TOPICS="$TOPICS,json"
+          # --- Databases ---
+          [ -f package.json ] && grep -q '"sqlite3"' package.json && TOPICS="$TOPICS,sqlite"
+          ls *.db > /dev/null 2>&1 && TOPICS="$TOPICS,sqlite"
+          [ -f package.json ] && grep -q '"pg"' package.json && TOPICS="$TOPICS,postgresql"
+          [ -f package.json ] && grep -q '"mysql"' package.json && TOPICS="$TOPICS,mysql"
+          [ -f package.json ] && grep -q '"mongodb"' package.json && TOPICS="$TOPICS,mongodb"
+          # --- Data & AI ---
+          if [ -f requirements.txt ]; then
+            for pkg in numpy pandas tensorflow pytorch scikit-learn keras matplotlib seaborn xgboost nltk transformers scipy; do
+              grep -qi "$pkg" requirements.txt && TOPICS="$TOPICS,$pkg"
+            done
+          fi
+          # --- GUI & Graphique ---
+          [ -f Cargo.toml ] && grep -q 'sdl2' Cargo.toml && TOPICS="$TOPICS,sdl2"
+          [ -f Cargo.toml ] && grep -q 'raylib' Cargo.toml && TOPICS="$TOPICS,raylib"
+          grep -rl 'import tkinter\|from tkinter' . --include="*.py" > /dev/null 2>&1 && TOPICS="$TOPICS,tkinter"
+          grep -rl 'import pygame\|from pygame' . --include="*.py" > /dev/null 2>&1 && TOPICS="$TOPICS,pygame"
+          # --- DevOps & Cloud ---
+          [ -f Dockerfile ] && TOPICS="$TOPICS,docker"
+          [ -f README.md ] && grep -qi 'kubernetes' README.md && TOPICS="$TOPICS,kubernetes"
+          [ -f README.md ] && grep -qi 'terraform' README.md && TOPICS="$TOPICS,terraform"
+          # --- Nettoyage et normalisation ---
+          TOPICS=$(echo "$TOPICS" | tr ',' '\n' | sed '/^\s*$/d' | tr '[:upper:]' '[:lower:]' | sed 's#[ /]#-#g' | cut -c1-50 | sort -u | tr '\n' ',' | sed 's/,$//')
+          echo "TOPICS=$TOPICS" >> $GITHUB_ENV
+      - name: Set repository topics
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.PAT_GITHUB }}
+          script: |
+            const topics = process.env.TOPICS.split(',').filter(t => t);
+            if (topics.length > 0) {
+              await github.rest.repos.replaceAllTopics({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                names: topics
+              });
+            } else {
+              console.log("Aucun topic valide détecté, skip update");
+            }
